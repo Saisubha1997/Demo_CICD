@@ -1,6 +1,6 @@
-def add(a, b):
-    return a + b
+"""This module contains functions for basic arithmetic operations."""
 
-if __name__ == "__main__":
-    result = add(5, 7)
-    print(f"Sum: {result}")
+def add(num1, num2):
+    """Return the sum of num1 and num2."""
+    result = num1 + num2
+    return result
