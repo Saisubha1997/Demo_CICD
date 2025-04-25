@@ -33,7 +33,12 @@ jobs:
       - name: Run tests
         run: |
           pytest --maxfail=1 --disable-warnings -q
-
+          
+      - name: Super-linter
+        uses: super-linter/super-linter@v7.3.0 # x-release-please-version
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Step 5: Lint the code using pylint
       - name: Run pylint
         run: |
